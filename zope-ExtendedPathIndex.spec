@@ -1,25 +1,25 @@
-%define product         ExtendedPathIndex
-%define ver             2.4
-%define rel             1
+%define Product ExtendedPathIndex
+%define product extendedpathindex
+%define name    zope-%{Product}
+%define version 2.4
+%define release %mkrel 2
 
 %define zope_minver     2.7
-
 %define zope_home       %{_prefix}/lib/zope
 %define software_home   %{zope_home}/lib/python
 
-
-Summary:        ExtendedPathIndex
-Name:           zope-%{product}
-Version:        %{ver}
-Release:        %mkrel %{rel}
-License:        GPL
-Group:          System/Servers
-Source:         http://plone.org/products/extendedpathindex/releases/%{version}/ExtendedPathIndex-%{version}.tar.bz2
-URL:            http://plone.org/products/extendedpathindex
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildArch:      noarch
-Requires:       zope >= %{zope_minver}
-Requires:       zope-Archetypes
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Summary:    ExtendedPathIndex
+License:    GPL
+Group:      System/Servers
+URL:        http://plone.org/products/%{product}
+Source:     http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{version}.tar.bz2
+Requires:   zope >= %{zope_minver}
+Requires:   zope-Archetypes
+BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 
 %description
@@ -59,9 +59,5 @@ if [ -f "%{_prefix}/bin/zopectl" ] && [ "`%{_prefix}/bin/zopectl status`" != "da
 fi
 
 %files
-%defattr(-, root, root, 0755)
+%defattr(-,root,root)
 %{software_home}/Products/*
-
-
-
-
