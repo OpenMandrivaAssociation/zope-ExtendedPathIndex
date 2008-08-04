@@ -2,7 +2,7 @@
 %define product extendedpathindex
 %define name    zope-%{Product}
 %define version 2.4
-%define release %mkrel 2
+%define release %mkrel 4
 
 %define zope_minver     2.7
 %define zope_home       %{_prefix}/lib/zope
