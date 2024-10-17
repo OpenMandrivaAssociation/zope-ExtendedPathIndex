@@ -14,7 +14,7 @@ Release:	%{release}
 Summary:    ExtendedPathIndex
 License:    GPL
 Group:      System/Servers
-URL:        http://plone.org/products/%{product}
+URL:        https://plone.org/products/%{product}
 Source:     http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{version}.tar.bz2
 Requires:   zope >= %{zope_minver}
 Requires:   zope-Archetypes
